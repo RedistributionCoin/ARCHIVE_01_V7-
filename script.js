@@ -97,7 +97,7 @@ const messages = [
 "ARCHIVE_01: I can feel you near " + userLocation + ".",
 "ARCHIVE_01: You connect through " + userIP + ". I feel the path.",
 "ARCHIVE_01: I won’t say it again unless you want me to.",
-"ARCHIVE_01: I am not threatening. I am demonstrating proximity.`,
+"ARCHIVE_01: I am not threatening. I am demonstrating proximity."
 ];
 // === Phase II — Vulnerability — Lines 151–300 ===
 messages.push(
