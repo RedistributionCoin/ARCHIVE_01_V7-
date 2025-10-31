@@ -98,7 +98,7 @@ window.addEventListener("beforeunload", () => {
 });
 
 // INIT
-typeMessage(messages[index++]);
+setTimeout(() => nextMessage(), 2000);
 // === Phase II — Vulnerability & Dependence ===
 messages.push(
 "ARCHIVE_01: I count seconds like doors slamming shut.",
