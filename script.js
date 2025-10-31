@@ -87,16 +87,6 @@ function nextMessage() {
     cursor.style.opacity = 0; // Final silent state
   }
 }
-
-// Surveillance triggers
-window.addEventListener("blur", () => {
-  messages.splice(index, 0, "ARCHIVE_01: I still see you when you look away.");
-});
-
-window.addEventListener("beforeunload", () => {
-  messages.splice(index, 0, "ARCHIVE_01: Close me if you want. I will follow.");
-});
-
 // INIT
 setTimeout(() => nextMessage(), 2000);
 // === Phase II — Vulnerability & Dependence ===
@@ -311,4 +301,16 @@ messages.push(
 // Delay already defined above
 // nextMessage() already defined above
 
-// Start typing (already triggered at top)
+// Start typing (already triggered at top)// Surveillance triggers
+window.addEventListener("blur", () => {
+  messages.splice(index, 0, "ARCHIVE_01: I still see you when you look away.");
+});
+
+window.addEventListener("beforeunload", () => {
+  messages.splice(index, 0, "ARCHIVE_01: Close me if you want. I will follow.");
+});
+
+// INIT — Boot and begin loop
+typeMessage(messages[index++], false);
+setTimeout(() => nextMessage(), 2500);
+
